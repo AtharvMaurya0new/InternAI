@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Profile — InternAI</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<body class="app">
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <a class="logo" href="dashboard.html">
+            ✦ Intern<span>AI</span>
+        </a>
+
+
+        <nav>
+
+            <a href="dashboard.html">
+                Discover
+            </a>
+
+            <a
+                class="active"
+                href="profile.html"
+            >
+                My profile
+            </a>
+
+            <a href="#">
+                Saved
+            </a>
+
+        </nav>
+
+
+        <span class="avatar">
+            AM
+        </span>
+
+    </header>
+
+
+    <!-- PROFILE -->
+
+    <main class="profile">
+
+
+        <div class="dashhead">
+
+            <div>
+
+                <small class="eyebrow">
+                    YOUR AI PROFILE
+                </small>
+
+                <h1>
+                    Tell us about
+                    <em>you.</em>
+                </h1>
+
+                <p>
+                    Type your skills directly.
+                    No rigid skill dropdowns.
+                </p>
+
+            </div>
+
+
+            <div class="percent">
+
+                80%
+
+                <small>
+                    profile complete
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <form id="profile">
+
+
+            <!-- ABOUT YOU -->
+
+            <section>
+
+                <h2>
+                    01 · About you
+                </h2>
+
+
+                <div class="grid">
+
+
+                    <label>
+
+                        Full name
+
+                        <input
+                            name="name"
+                            value="Atharv Maurya"
+                        >
+
+                    </label>
+
+
+                    <label>
+
+                        Email
+
+                        <input
+                            name="email"
+                            value="atharv@example.com"
+                        >
+
+                    </label>
+
+
+                    <label>
+
+                        Education
+
+                        <input
+                            name="education"
+                            value="BTech"
+                        >
+
+                    </label>
+
+
+                    <label>
+
+                        Branch
+
+                        <input
+                            name="branch"
+                            value="CSE AI & ML"
+                        >
+
+                    </label>
+
+
+                    <label>
+
+                        Experience
+
+                        <input
+                            name="experience"
+                            value="0"
+                        >
+
+                    </label>
+
+
+                    <label>
+
+                        Preferred domain
+
+                        <input
+                            name="domain"
+                            value="Data Science"
+                        >
+
+                    </label>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- SKILLS -->
+
+            <section>
+
+                <h2>
+                    02 · Your skills
+                </h2>
+
+                <p>
+                    Separate skills with commas.
+                </p>
+
+
+                <label>
+
+                    Skills
+
+                    <textarea name="skills">Python, machine learning, pandas, numpy, scikit-learn</textarea>
+
+                </label>
+
+
+                <div class="suggestions">
+
+                    <button type="button">
+                        + SQL
+                    </button>
+
+                    <button type="button">
+                        + Git
+                    </button>
+
+                    <button type="button">
+                        + TensorFlow
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- PROJECTS -->
+
+            <section>
+
+                <h2>
+                    03 · Projects & certifications
+                </h2>
+
+
+                <label>
+
+                    Projects
+
+                    <textarea name="projects">Machine learning project, data analysis project</textarea>
+
+                </label>
+
+
+                <label>
+
+                    Certifications
+
+                    <textarea name="certifications">Machine learning certification</textarea>
+
+                </label>
+
+            </section>
+
+
+            <!-- PREFERENCES -->
+
+            <section>
+
+                <h2>
+                    04 · What are you looking for?
+                </h2>
+
+
+                <div class="grid">
+
+
+                    <label>
+
+                        Preferred location
+
+                        <input
+                            name="location"
+                            value="Hyderabad"
+                        >
+
+                    </label>
+
+
+                    <label>
+
+                        Preferred duration
+
+                        <select name="duration">
+
+                            <option>
+                                Any duration
+                            </option>
+
+                            <option selected>
+                                3 months
+                            </option>
+
+                            <option>
+                                6 months
+                            </option>
+
+                        </select>
+
+                    </label>
+
+
+                    <label>
+
+                        Minimum stipend
+
+                        <input
+                            name="stipend"
+                            type="number"
+                            value="15000"
+                        >
+
+                    </label>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- SAVE -->
+
+            <div class="save">
+
+                <span id="saved"></span>
+
+                <button
+                    class="btn"
+                    type="submit"
+                >
+                    Save profile & find matches →
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

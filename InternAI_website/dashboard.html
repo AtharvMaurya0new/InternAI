@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Your Matches — InternAI</title>
+
+    <link
+        rel="stylesheet"
+        href="styles.css"
+    >
+
+</head>
+
+
+<body class="app">
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header>
+
+        <a
+            class="logo"
+            href="dashboard.html"
+        >
+            ✦ Intern<span>AI</span>
+        </a>
+
+
+        <nav>
+
+            <a
+                class="active"
+                href="dashboard.html"
+            >
+                Discover
+            </a>
+
+
+            <a href="profile.html">
+                My profile
+            </a>
+
+
+            <!-- ONLY THIS SAVED LINK WAS CHANGED -->
+            <a
+                href="#saved"
+                id="savedLink"
+            >
+                Saved
+            </a>
+
+        </nav>
+
+
+        <span class="avatar">
+            AM
+        </span>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN DASHBOARD
+    ========================================== -->
+
+    <main class="dash">
+
+
+        <!-- =====================================
+             DASHBOARD HEADING
+        ====================================== -->
+
+        <div class="dashhead">
+
+            <div>
+
+                <small class="eyebrow">
+                    AI INTERNSHIP DISCOVERY
+                </small>
+
+
+                <h1>
+                    Find your next
+                    <em>opportunity.</em>
+                </h1>
+
+
+                <p>
+                    Your recommendations are generated
+                    using your profile and the InternAI
+                    recommendation engine.
+                </p>
+
+            </div>
+
+
+            <!-- PROFILE COMPLETION -->
+
+            <a
+                class="completion"
+                href="profile.html"
+            >
+
+                <b>
+                    Profile 0%
+                </b>
+
+
+                <i></i>
+
+
+                <small>
+                    Improve your matches →
+                </small>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- =====================================
+             SEARCH BAR
+        ====================================== -->
+
+        <section class="search">
+
+
+            <!-- SEARCH -->
+
+            <input
+                id="q"
+                type="text"
+                placeholder="⌕  Search by role, skill or company..."
+            >
+
+
+            <!-- DOMAIN -->
+
+            <select id="domain">
+
+                <option value="">
+                    All domains
+                </option>
+
+
+                <option value="Data Science">
+                    Data Science
+                </option>
+
+
+                <option value="Machine Learning">
+                    Machine Learning
+                </option>
+
+
+                <option value="Web Development">
+                    Web Development
+                </option>
+
+
+                <option value="Software Development">
+                    Software Development
+                </option>
+
+
+                <option value="Data Analytics">
+                    Data Analytics
+                </option>
+
+            </select>
+
+
+            <!-- LOCATION -->
+
+            <select id="loc">
+
+                <option value="">
+                    All locations
+                </option>
+
+
+                <option value="Hyderabad">
+                    Hyderabad
+                </option>
+
+
+                <option value="Bangalore">
+                    Bangalore
+                </option>
+
+
+                <option value="Gurgaon">
+                    Gurgaon
+                </option>
+
+
+                <option value="Mumbai">
+                    Mumbai
+                </option>
+
+
+                <option value="Delhi">
+                    Delhi
+                </option>
+
+
+                <option value="Remote">
+                    Remote
+                </option>
+
+            </select>
+
+
+            <button
+                class="btn"
+                id="find"
+                type="button"
+            >
+                Find matches →
+            </button>
+
+        </section>
+
+
+
+        <!-- =====================================
+             DASHBOARD CONTENT
+        ====================================== -->
+
+        <div class="layout">
+
+
+            <!-- =================================
+                 SIDEBAR
+            ================================== -->
+
+            <aside>
+
+                <b>
+                    Your preferences
+                </b>
+
+
+                <!-- MINIMUM STIPEND -->
+
+                <label>
+
+                    Minimum stipend
+
+                    <input
+                        id="sidebarStipend"
+                        type="number"
+                        value="0"
+                    >
+
+                </label>
+
+
+                <!-- DURATION -->
+
+                <label>
+
+                    Duration
+
+                    <select id="sidebarDuration">
+
+                        <option value="">
+                            Any duration
+                        </option>
+
+
+                        <option value="3 Months">
+                            3 months
+                        </option>
+
+
+                        <option value="6 Months">
+                            6 months
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <!-- REMOTE -->
+
+                <label class="check">
+
+                    <input
+                        id="remoteCheck"
+                        type="checkbox"
+                        checked
+                    >
+
+                    Include remote
+
+                </label>
+
+
+
+                <!-- TIP -->
+
+                <div class="tip">
+
+                    ✦ <b>Tip</b>
+
+
+                    <p>
+                        Your recommendations are generated
+                        by the AI engine using your skills,
+                        domain, location, duration and stipend
+                        preferences.
+                    </p>
+
+
+                    <a href="profile.html">
+                        Update profile →
+                    </a>
+
+                </div>
+
+            </aside>
+
+
+
+            <!-- =================================
+                 RECOMMENDATIONS
+            ================================== -->
+
+            <section>
+
+
+                <div class="resulttop">
+
+                    <div>
+
+                        <h2>
+                            Recommended for you
+                        </h2>
+
+
+                        <small id="count">
+                            Loading AI recommendations...
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     REAL RECOMMENDATIONS GO HERE
+                ================================== -->
+
+                <div id="jobs">
+
+                    <div class="empty">
+
+                        <h3>
+                            Loading your AI recommendations...
+                        </h3>
+
+
+                        <p>
+                            Connecting to the InternAI
+                            recommendation engine.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     NO RESULTS
+                ================================== -->
+
+                <div
+                    id="empty"
+                    class="empty"
+                    hidden
+                >
+
+                    <div>
+                        ⌕
+                    </div>
+
+
+                    <h3>
+                        No matches found
+                    </h3>
+
+
+                    <p>
+                        Try changing your search or
+                        updating your profile.
+                    </p>
+
+
+                    <a
+                        class="btn"
+                        href="profile.html"
+                    >
+                        Update profile →
+                    </a>
+
+                </div>
+
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

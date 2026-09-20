@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign in — InternAI</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<body class="auth">
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <a class="logo" href="index.html">
+            ✦ Intern<span>AI</span>
+        </a>
+
+        <a href="index.html">
+            ← Back home
+        </a>
+
+    </header>
+
+
+    <main class="authgrid">
+
+
+        <!-- LEFT SIDE -->
+
+        <section class="art">
+
+            <small>
+                ✦ YOUR NEXT OPPORTUNITY STARTS HERE
+            </small>
+
+            <h1>
+                One profile.
+                <br>
+                <em>Better matches.</em>
+            </h1>
+
+            <p>
+                Tell us what you can do and what you're looking for.
+                InternAI will take it from there.
+            </p>
+
+
+            <div class="float">
+
+                <b>
+                    92.8%
+                </b>
+
+                <span>
+                    AI match
+                </span>
+
+                <strong>
+                    Data Science Analytics
+                </strong>
+
+                <small>
+                    Python · Pandas · Machine Learning
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- LOGIN FORM -->
+
+        <section class="panel">
+
+            <form id="auth">
+
+                <h2 id="title">
+                    Welcome back
+                </h2>
+
+                <p id="sub">
+                    Sign in to continue to your recommendations.
+                </p>
+
+
+                <label>
+
+                    Email
+
+                    <input
+                        type="email"
+                        required
+                        placeholder="you@example.com"
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Password
+
+                    <div class="pw">
+
+                        <input
+                            id="pw"
+                            type="password"
+                            required
+                            placeholder="Enter your password"
+                        >
+
+                        <button
+                            type="button"
+                            id="show"
+                        >
+                            Show
+                        </button>
+
+                    </div>
+
+                </label>
+
+
+                <div class="row">
+
+                    <label class="check">
+
+                        <input type="checkbox">
+
+                        Remember me
+
+                    </label>
+
+
+                    <a href="#">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <button
+                    class="btn full"
+                    type="submit"
+                    id="submit"
+                >
+                    Sign in →
+                </button>
+
+
+                <div class="or">
+                    or
+                </div>
+
+
+                <button
+                    type="button"
+                    class="social"
+                >
+                    ◉ Continue with Google
+                </button>
+
+
+                <p class="switch">
+
+                    <span id="switchText">
+                        Don't have an account?
+                    </span>
+
+                    <a href="#" id="switch">
+                        Create one
+                    </a>
+
+                </p>
+
+
+                <small>
+                    Demo UI — authentication will connect to your backend API.
+                </small>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
