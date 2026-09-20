@@ -1,2 +1,18 @@
+[project]
+name = "internai"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "Flask",
+    "flask-cors",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "joblib",
+    "sentence-transformers",
+    "torch",
+    "scipy"
+]
+
 [tool.vercel]
 entrypoint = "src.backend:app"
