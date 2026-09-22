@@ -2,8 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import numpy as np
 
-from recommendation_engine import RecommendationEngine
-
+from src.recommendation_engine import RecommendationEngine
 
 
 
