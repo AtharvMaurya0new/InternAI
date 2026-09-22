@@ -1,9 +1,9 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import numpy as np
+import os
 
 from src.recommendation_engine import RecommendationEngine
-
 
 
 # ============================================================
@@ -75,7 +75,6 @@ def recommend():
         data = request.get_json(
             silent=True
         )
-
 
         if not data:
 
@@ -387,7 +386,6 @@ def recommend():
             )
         )
 
-
         print("=" * 60)
 
 
@@ -428,6 +426,40 @@ def recommend():
 
 
 # ============================================================
+# SERVE WEBSITE
+# ============================================================
+
+from flask import send_from_directory
+
+WEBSITE_DIR = os.path.join(
+    os.path.dirname(
+        os.path.dirname(
+            os.path.abspath(__file__)
+        )
+    ),
+    "InternAI_website"
+)
+
+
+@app.route("/")
+def home():
+
+    return send_from_directory(
+        WEBSITE_DIR,
+        "index.html"
+    )
+
+
+@app.route("/<path:filename>")
+def website_files(filename):
+
+    return send_from_directory(
+        WEBSITE_DIR,
+        filename
+    )
+
+
+# ============================================================
 # START SERVER
 # ============================================================
 
@@ -439,6 +471,7 @@ if __name__ == "__main__":
     print("=" * 60)
 
     print()
+
     print(
         "Backend:"
     )
@@ -448,6 +481,7 @@ if __name__ == "__main__":
     )
 
     print()
+
     print(
         "Health check:"
     )
@@ -457,6 +491,7 @@ if __name__ == "__main__":
     )
 
     print()
+
     print(
         "Recommendation API:"
     )
@@ -466,6 +501,7 @@ if __name__ == "__main__":
     )
 
     print()
+
     print(
         "Waiting for website requests..."
     )
