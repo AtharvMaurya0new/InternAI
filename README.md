@@ -8,7 +8,7 @@ The system combines semantic similarity, skill matching, domain matching, locati
 
 ## 🚀 Live Demo
 
-[Visit InternAI](YOUR_LIVE_DEMO_LINK)
+[Visit InternAI](https://internai23.vercel.app)
 
 ## 📌 Features
 
